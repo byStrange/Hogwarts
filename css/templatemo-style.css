@@ -990,8 +990,11 @@ input[type=number] {
       width: inherit;
       height: inherit;
     }
+    .item .coursers-info .courses-price{
+      display: none !important 
+    }
   }
-
+	
 #team {
 	display: none
 }

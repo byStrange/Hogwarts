@@ -1,5 +1,3 @@
-/
-
   @import url('https://fonts.googleapis.com/css?family=Muli:300,700|Nunito');
 
   body {
@@ -114,6 +112,7 @@
     padding: 6em;
     width: 450px;
     height: 450px;
+    color: #fff;
   }
 
   .entry-form h2 {

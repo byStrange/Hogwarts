@@ -76,7 +76,6 @@ input[type=number] {
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-
   a:hover, a:active, a:focus {
     color: #29ca8e;
     outline: none;

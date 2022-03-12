@@ -892,6 +892,7 @@ input[type=number] {
     .contact-image {
       margin-top: 50px;
     }
+	  #about .col-md-offset-1 {display: flex; justify-content: center;}
   }
 
 

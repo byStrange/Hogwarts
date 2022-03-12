@@ -371,16 +371,16 @@
   .caption h3 a:hover { color: #FF3; }
 
   .home-slider .item-first {
-    background-image: url(../images/test.jpg);
+    background-image: url(../image/test.jpg);
 	background-position: center;
   }
 
   .home-slider .item-second {
-    background-image: url(../images/test.jpg);
+    background-image: url(../image/test.jpg);
   }
 
   .home-slider .item-third {
-    background-image: url(../images/test.jpg);
+    background-image: url(../image/test.jpg);
   }
 
 

@@ -6,7 +6,7 @@
     overflow-x: hidden;
     padding-top: 70px;
   }
-
+ 
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -449,7 +449,9 @@ input[type=number] {
     line-height: 50px;
     text-align: center;
   }
-
+#about form input, select{
+    color: #fff !important
+}
 
 
   /*---------------------------------------

@@ -981,4 +981,8 @@
       height: inherit;
     }
   }
+
+#team {
+	display: none
+}
   

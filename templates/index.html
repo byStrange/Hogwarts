@@ -1,3 +1,4 @@
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,14 +11,16 @@
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
      
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/owl.carousel.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-     <style type="text/css">div.owl-prev,div.owl-next{width: 70px !important;}
+     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+     <link rel="stylesheet" href="/static/css/owl.carousel.css">
+     <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
+     <style type="text/css">div.owl-prev,div.owl-next{width: 70px !important;}select {
+          background: #333 !important;
+        }
      	</style>
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="css/templatemo-style.css">
+     <link rel="stylesheet" href="/static/css/templatemo-style.css">
 
 </head>
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
@@ -44,7 +47,7 @@
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand">Hogwarts</a>
+                    <a href="/static/index.html" class="navbar-brand">Hogwarts</a>
                </div>
 
                <!-- MENU LINKS -->
@@ -182,19 +185,10 @@
 
                     <div class="col-md-offset-1 col-md-4 col-sm-12">
                          <div class="entry-form">
-                              <form action="#" method="post">
+                              <form method="post">
+                                   {% csrf_token %}
                                    <h2>Hoziroq ro`yxatdan o`tish </h2>
-                                   <input type="text" name="full_name" class="form-control" placeholder="To`liq ismingiz" required="">
-                                   <input type="number" name="phone_number" class="form-control" placeholder="Telefon raqamingiz" required="">
-                                   <select name="select" class="form-control" style="background:#333">
-                                        <option disabled selected>Darajangiz</option>
-                                        <option>Beginner</option>
-                                        <option>Elementary</option>
-                                        <option value="pre_intermediate">Pre Intermediate</option>
-                                        <option>Intermediate</option>
-                                        <option>Advanced</option>
-                                        <option>IELTS</option>
-                                   </select>     
+                                   {{ registerForm|crispy }}   
                                    <button class="submit-btn form-control" id="form-submit">Kursga yozdirish</button>
                               </form>
                          </div>
@@ -219,7 +213,7 @@
                     <div class="col-md-3 col-sm-6">
                          <div class="team-thumb">
                               <div class="team-image">
-                                   <img src="image/test.jpg" class="img-responsive" alt="">
+                                   <img src="/static/image/test.jpg" class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
                                    <h3>Somebody</h3>
@@ -236,7 +230,7 @@
                     <div class="col-md-3 col-sm-6">
                          <div class="team-thumb">
                               <div class="team-image">
-                                   <img src="image/test.jpg" class="img-responsive" alt="">
+                                   <img src="/static/image/test.jpg" class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
                                    <h3>Somebody</h3>
@@ -252,7 +246,7 @@
                     <div class="col-md-3 col-sm-6">
                          <div class="team-thumb">
                               <div class="team-image">
-                                   <img src="image/test.jpg" class="img-responsive" alt="">
+                                   <img src="/static/image/test.jpg" class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
                                    <h3>Somebody</h3>
@@ -269,7 +263,7 @@
                     <div class="col-md-3 col-sm-6">
                          <div class="team-thumb">
                               <div class="team-image">
-                                   <img src="image/test.jpg" class="img-responsive" alt="">
+                                   <img src="/static/image/test.jpg" class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
                                    <h3> Somebody</h3>
@@ -304,7 +298,7 @@
                                         <div class="courses-thumb">
                                              <div class="courses-top">
                                                   <div class="courses-image">
-                                                       <img src="image/test.jpg" class="img-responsive" alt="">
+                                                       <img src="/static/image/test.jpg" class="img-responsive" alt="">
                                                   </div>
                                                   <div class="courses-date">
                                                        <span><i class="fa fa-calendar"></i></span>
@@ -319,7 +313,7 @@
 
                                              <div class="courses-info">
                                                   <div class="courses-author">
-                                                       <img src="image/test.jpg" class="img-responsive" alt="">
+                                                       <img src="/static/image/test.jpg" class="img-responsive" alt="">
                                                        <span>Abduroziq Halilov</span>
                                                   </div>
                                                   <div class="courses-price">
@@ -335,7 +329,7 @@
                                         <div class="courses-thumb">
                                              <div class="courses-top">
                                                   <div class="courses-image">
-                                                       <img src="image/test.jpg" class="img-responsive" alt="">
+                                                       <img src="/static/image/test.jpg" class="img-responsive" alt="">
                                                   </div>
                                                   <div class="courses-date">
                                                        <span><i class="fa fa-calendar"></i> 20 / 7 / 2021</span>
@@ -350,7 +344,7 @@
 
                                              <div class="courses-info">
                                                   <div class="courses-author">
-                                                       <img src="image/test.jpg" class="img-responsive" alt="">
+                                                       <img src="/static/image/test.jpg" class="img-responsive" alt="">
                                                        <span>Abduroziq Halilov</span>
                                                   </div>
                                                   <div class="courses-price">
@@ -366,7 +360,7 @@
                                         <div class="courses-thumb">
                                              <div class="courses-top">
                                                   <div class="courses-image">
-                                                       <img src="image/test.jpg" class="img-responsive" alt="">
+                                                       <img src="/static/image/test.jpg" class="img-responsive" alt="">
                                                   </div>
                                                   <div class="courses-date">
                                                        <span><i class="fa fa-calendar"></i> 15 / 8 / 2021</span>
@@ -381,7 +375,7 @@
 
                                              <div class="courses-info">
                                                   <div class="courses-author">
-                                                       <img src="image/test.jpg" class="img-responsive" alt="">
+                                                       <img src="/static/image/test.jpg" class="img-responsive" alt="">
                                                        <span>Abduroziq Halilov</span>
                                                   </div>
                                                   <div class="courses-price free">
@@ -397,7 +391,7 @@
                                         <div class="courses-thumb">
                                              <div class="courses-top">
                                                   <div class="courses-image">
-                                                       <img src="image/test.jpg" class="img-responsive" alt="">
+                                                       <img src="/static/image/test.jpg" class="img-responsive" alt="">
                                                   </div>
                                                   <div class="courses-date">
                                                        <span><i class="fa fa-calendar"></i> 10 / 8 / 2021</span>
@@ -412,7 +406,7 @@
 
                                              <div class="courses-info">
                                                   <div class="courses-author">
-                                                       <img src="image/test.jpg" class="img-responsive" alt="">
+                                                       <img src="/static/image/test.jpg" class="img-responsive" alt="">
                                                        <span>Abduroziq Halilov</span>
                                                   </div>
                                                   <div class="courses-price">
@@ -428,7 +422,7 @@
                                         <div class="courses-thumb">
                                              <div class="courses-top">
                                                   <div class="courses-image">
-                                                       <img src="image/test.jpg" class="img-responsive" alt="">
+                                                       <img src="/static/image/test.jpg" class="img-responsive" alt="">
                                                   </div>
                                                   <div class="courses-date">
                                                        <span><i class="fa fa-calendar"></i> 5 / 10 / 2021</span>
@@ -443,7 +437,7 @@
 
                                              <div class="courses-info">
                                                   <div class="courses-author">
-                                                       <img src="image/test.jpg" class="img-responsive" alt="">
+                                                       <img src="/static/image/test.jpg" class="img-responsive" alt="">
                                                        <span>Hasanboy</span>
                                                   </div>
                                                   <div class="courses-price free">
@@ -473,7 +467,7 @@
                               <div class="col-md-4 col-sm-10">
                                    <div class="item">
                                         <div class="tst-image">
-                                             <img src="image/test.jpg" class="img-responsive" alt="">
+                                             <img src="/static/image/test.jpg" class="img-responsive" alt="">
                                         </div>
                                         <div class="tst-author">
                                              <h4>Somebody </h4>
@@ -493,7 +487,7 @@
                               <div class="col-md-4 col-sm-10">
                                    <div class="item">
                                         <div class="tst-image">
-                                             <img src="image/test.jpg" class="img-responsive" alt="">
+                                             <img src="/static/image/test.jpg" class="img-responsive" alt="">
                                         </div>
                                         <div class="tst-author">
                                              <h4>Somebody</h4>
@@ -511,7 +505,7 @@
                               <div class="col-md-4 col-sm-10">
                                    <div class="item">
                                         <div class="tst-image">
-                                             <img src="image/test.jpg" class="img-responsive" alt="">
+                                             <img src="/static/image/test.jpg" class="img-responsive" alt="">
                                         </div>
                                         <div class="tst-author">
                                              <h4>Somebody</h4>
@@ -530,7 +524,7 @@
                               <div class="col-md-4 col-sm-10">
                                    <div class="item">
                                         <div class="tst-image">
-                                             <img src="image/test.jpg" class="img-responsive" alt="">
+                                             <img src="/static/image/test.jpg" class="img-responsive" alt="">
                                         </div>
                                         <div class="tst-author">
                                              <h4>Somebody</h4>
@@ -560,16 +554,13 @@
 
                     <div class="col-md-6 col-sm-12">
                          <form id="contact-form" role="form" action="" method="post">
+                              {% csrf_token %}
                               <div class="section-title">
                                    <h2>Bizga murojat qilish <small>biz suxbatlarni sevamiz. biz bilan aloqaga chiqing!</small></h2>
                               </div>
 
                               <div class="col-md-12 col-sm-12">
-                                   <input type="text" class="form-control" placeholder="To'liq ismingiz" name="name" required="">
-                    
-                                   <input type="email" class="form-control" placeholder="Email manzilingiz" name="email" required="">
-
-                                   <textarea class="form-control" rows="6" placeholder="Bizga murojatingiz" name="message" required="" style="resize: vertical !important"></textarea>
+                                   {{ contactForm|crispy }}
                               </div>
 
                               <div class="col-md-4 col-sm-12">
@@ -581,7 +572,7 @@
 
                     <div class="col-md-6 col-sm-12">
                          <div class="contact-image">
-                              <img src="image/test.jpg" class="img-responsive" alt="courses-price">
+                              <img src="/static/image/test.jpg" class="img-responsive" alt="courses-price">
                          </div>
                     </div>
 
@@ -605,7 +596,7 @@
                               </address>
 
                               <ul class="social-icon">
-                                   <li><a style="font-size: 32px;" href="https://t.me/NEW_HOGWARTS" class="fa fa-telegram" _	new=""></a></li>
+                                   <li><a style="font-size: 32px;" href="/static/https://t.me/NEW_HOGWARTS" class="fa fa-telegram" _	new=""></a></li>
                               </ul>
 
                               <div class="copyright-text"> 
@@ -621,7 +612,7 @@
                               </div>
                               <address>
                                    <p><a href="tel:916110083">+998 91 611 00 83</a></p>
-                                   <p><a href="mailto:youremail.co">example@gmail.com</a></p>
+                                   <p><a href="/static/mailto:youremail.co">example@gmail.com</a></p>
                               </address>
 
                               <div class="footer_menu">
@@ -658,13 +649,30 @@
           </div>
      </footer>
 
+     <script>
+          index = 0;
+          input_placeholder = ["", "To'liq ismingiz", "Telefon Raqamingiz", "", "To'liq ismingiz", "Email manzilingiz", "", "Emailingizni kiriting"]
+          document.querySelectorAll('input').forEach(e => {
+               e.setAttribute('Placeholder', `${input_placeholder[index]}`)
+               index++;
+          });
+          document.querySelectorAll('label').forEach(e => {
+               e.style = 'display: none;'
+          });
+          document.querySelectorAll('.invalid-feedback').forEach(e => {
+               e.style = 'display: none;'
+          });
+          document.querySelectorAll('textarea').forEach(e => {
+               e.setAttribute('Placeholder', 'Bizga murojatingiz')
+          })
+     </script>
 
      <!-- SCRIPTS -->
-     <script src="js/jquery.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/custom.js"></script>
+     <script src="/static/js/jquery.js"></script>
+     <script src="/static/js/bootstrap.min.js"></script>
+     <script src="/static/js/owl.carousel.min.js"></script>
+     <script src="/static/js/smoothscroll.js"></script>
+     <script src="/static/js/custom.js"></script>
 
 </body>
 </html>

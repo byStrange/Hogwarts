@@ -1,1 +1,0 @@
-# Hogwarts educational center template
